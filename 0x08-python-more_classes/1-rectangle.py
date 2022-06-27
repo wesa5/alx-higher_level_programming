@@ -1,11 +1,10 @@
 #!/usr/bin/python3
-
 """Create a Rectangle"""
+
 
 class Rectangle:
     """
     Creates a Recangle
-    
     """
 
     def __init__(self, width=0, height=0):
@@ -19,7 +18,7 @@ class Rectangle:
         self.height = height
     
     @property
-    def width(self):
+    def width(self,):
         """gets the width
         returns width of rectangle
         """
