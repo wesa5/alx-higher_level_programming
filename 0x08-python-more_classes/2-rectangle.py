@@ -1,12 +1,9 @@
 #!/usr/bin/python3
-"""Defines a Rectangle"""
+"""Area and Perimeter"""
 
 
 class Rectangle:
-    """
-    Creates a Recangle
-    
-    """
+    """Defines the implementation of a rectangle"""
 
     def __init__(self, width=0, height=0):
         self.width = width
@@ -14,20 +11,12 @@ class Rectangle:
     
     @property
     def width(self):
-        """gets the width
-        returns width of rectangle
-        """
+        """Property retriever, for retreiving"""
         return self.__width
     
     @width.setter
     def width(self, value):
-        """sets function to with
-        Arguments:
-             value {int} -[value of width]
-        Raises:
-             TypeError: width must be an integer
-             ValueError: width must be >= 0
-        """
+        
         if type(value) != int:
             raise TypeError("Width must be an integer")
         if value < 0:
@@ -37,20 +26,14 @@ class Rectangle:
 
     @property
     def height(self):
-        """gets the height
-        returns height of rectangle
+        """Property retriever, for retreiving
+        the rectangle height
         """
         return self.__height
 
     @height.setter
     def height(self, value):
-        """sets function to height
-        Arguments:
-             value {int} -[value of height]
-        Raises:
-             TypeError: height must be an integer
-             ValueError: height must be >= 0
-        """
+
         if type(value) != int:
             raise TypeError("height must be an integer")
         if value < 0:
@@ -59,19 +42,15 @@ class Rectangle:
         self.__height = value
     
     def area(self):
-        """
-        Calculates area of Rectangle
-        Returns: area of rectangle 
-
+        """Public instance method that returns
+        the rectangle area
         """
         self_area = self.__width * self.__height
         return self_area
     
     def perimeter(self):
-        """
-        Calculates perimeter of Rectangle
-        Returns: perimeter of rectangle 
-
+        """Public instance method that returns the
+        rectangle perimeter
         """
         if self.__width == 0 or self.__height == 0:
             return 0
