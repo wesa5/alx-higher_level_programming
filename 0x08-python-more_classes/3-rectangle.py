@@ -2,7 +2,6 @@
 """Defines a Rectangle"""
 
 
-
 class Rectangle:
     """
     Creates a Recangle
