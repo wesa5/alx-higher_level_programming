@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-
 """Defines a Rectangle"""
+
 
 class Rectangle:
     """
@@ -9,12 +9,6 @@ class Rectangle:
     """
 
     def __init__(self, width=0, height=0):
-        """"
-        initialize the class rectangle
-        Keyword Arguments:
-            width {int} -- width of the rectangle (default: {0})
-            height {int} -- height of the rectangle (default: {0})
-        """
         self.width = width
         self.height = height
     
@@ -70,8 +64,8 @@ class Rectangle:
         Returns: area of rectangle 
 
         """
-        self.area = self.__width * self.__height
-        return self.area
+        self_area = self.__width * self.__height
+        return self_area
     
     def perimeter(self):
         """
@@ -81,6 +75,6 @@ class Rectangle:
         """
         if self.__width == 0 or self.__height == 0:
             return 0
-        self.perimeter = self.__width + self.__height + self.__width + self.__height
+        self_perimeter = self.__width + self.__height + self.__width + self.__height
 
-        return self.perimeter
+        return self_perimeter
