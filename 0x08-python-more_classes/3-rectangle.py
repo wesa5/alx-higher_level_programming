@@ -86,17 +86,13 @@ class Rectangle:
         return self.perimeter
     
     def __str__(self):
-        """ 
-        Method that gets the string representation of the rectangle
-        Returns:
-            string -- string representation
-        """
-        string = ""
+        """Returns the rectangle with the # character."""
         if self.__width == 0 or self.__height == 0:
-            return 0
-        for row in range(self.__height):
-            for col in range(self.__width):
-                string = string + '#'
-            string = string + '\n'
-        return string[:-1]
+            return ("")
 
+        rectangle = []
+        for i in range(self.__height):
+            [rectangle.append('#') for j in range(self.__width)]
+            if i != self.__height - 1:
+                rectangle.append("\n")
+        return ("".join(rectangle))
