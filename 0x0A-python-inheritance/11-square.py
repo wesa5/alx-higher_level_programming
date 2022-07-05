@@ -1,21 +1,26 @@
 #!/usr/bin/python3
-"""Module contains implementation of `Square` class"""
-
+"""
+Contains definition for the class Square
+"""
 
 Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
-    """Inherits from class `Rectangle`"""
+    """Definition of class square that inherits from class Rectangle"""
 
     def __init__(self, size):
-        """Initializes the values"""
-        self.integer_validator("size", size)
+        """Initializes instance of the class Square"""
+        super().integer_validator("size", size)
+        super().__init__(size, size)
         self.__size = size
-        super().__init__(self.__size, self.__size)
-    
+
+
+    def area(self):
+        """Method for computing Square area"""
+        return self.__size ** 2
+
 
     def __str__(self):
-        """Prints the description of the `Rectangle`"""
-        string = "[Square] {}/{}".format(self.__size, self.__size)
-        return string
+        """Returns string representation of an instance of class square"""
+        return "[{}] {}/{}".format(type(self).__name__, self.__size, self.__size)
