@@ -1,8 +1,14 @@
 #!/usr/bin/node
-const { argv } = require('process');
 
-if (argv[2] === undefined) {
-  console.log('No argument');
+/**
+ * a script that prints a message depending
+ * on the number of arguments passed:
+ * if no arguments are passed to the script, print “No argument”
+ * if only one argument is passed to the script, print “Argument found”
+ * Otherwise, print “Arguments found”
+ */
+ if (process.argv[2]) {
+  console.log(process.argv[2]);
 } else {
-  console.log(argv[2]);
+  console.log('No argument');
 }
